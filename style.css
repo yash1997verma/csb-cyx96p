@@ -1,0 +1,96 @@
+/* custom fonts */
+@font-face {
+  font-family: "bitsa";
+  src: url("/fonts/moonkids/MoonkidsPersonalUseExtbd-gxPZ3.ttf");
+}
+@font-face {
+  font-family: "stopwatch";
+  src: url("/fonts/dont-clic-me/DontClickMeDemoRegular-2X28.ttf");
+}
+@font-face {
+  font-family: "watch-text";
+  src: url("../fonts/sans/MontserratBold-DOWZd.ttf");
+}
+body {
+  overflow: hidden;
+  background-image: linear-gradient(to left, #343a40, #212529);
+}
+
+/* for wave pattern */
+.wave {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: auto;
+}
+.heading {
+  padding: 20px;
+  color: white;
+}
+.heading p:nth-child(1) {
+  font-family: bitsa;
+  font-size: 22px;
+}
+
+.heading p:nth-child(2) {
+  transform: rotate(-6deg);
+  position: absolute;
+  top: 3.1vh;
+  left: 1vw;
+  font-family: stopwatch;
+  color: #ff0071;
+  font-size: 38px;
+}
+
+/* ***********************Watch**************************** */
+.watch {
+  position: relative;
+  top: 15vh;
+  margin: 0 auto;
+  border-radius: 16px;
+  width: 60vw;
+  max-width: 800px;
+  height: 40vh;
+  background-color: white;
+
+  box-shadow: 0 0 10px rgb(255, 255, 255);
+}
+
+.time {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 10vw;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.controls {
+  position: absolute;
+  bottom: 0;
+  left: 3%;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.controls button {
+  background-color: #4f5457;
+  margin: 4px 0;
+  width: 60%;
+  border: none;
+  outline: none;
+  font-family: watch-text;
+}
+.controls button:hover {
+  background-color: #4f5457;
+  opacity: 0.5;
+}
+
+#start:active,
+#stop:active,
+#reset:active {
+  background-color: #212529;
+}
